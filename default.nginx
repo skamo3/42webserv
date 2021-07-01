@@ -2,7 +2,7 @@
 # 파일의 마지막은 반드시 뉴라인으로 끝내야함
 # ;와 # 뒤는 주석으로 처리됨
 
-user  nginx; # 유저 권한
+  user  nginx; # 유저 권한
 worker_processes  200; # 프로세스 실행 가능 수
 
 error_log  /var/log/nginx/error.log warn; # 에러 정보 저장

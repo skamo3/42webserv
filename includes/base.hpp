@@ -1,5 +1,5 @@
-#ifndef WEBSERV_H
-#define WEBSERV_H
+#ifndef BASE_HPP
+#define BASE_HPP
 
 #include <iostream>
 #include <string>
@@ -10,6 +10,7 @@
 #include <list>
 #include <algorithm>
 #include <exception>
+#include <fstream>
 
 #include <fcntl.h>
 #include <stdlib.h>
