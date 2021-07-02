@@ -8,6 +8,8 @@ int main(int argc, char **argv)
 	{
 		WebService::getInstance()->initConfig(argc, argv);
 
+		WebService::getInstance()->initServer();
+
 	}
 	catch(const std::exception& e)
 	{

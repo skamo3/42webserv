@@ -2,14 +2,14 @@ NAME = webserv
 
 CC = clang++
 
-CFLAGS = -Werror -Wextra -Wall
+CFLAGS = -g -Werror -Wextra -Wall
 
 SRCSDIR = ./srcs/
 
 INCDIR = ./includes/
 
 SRCS = $(addprefix $(SRCSDIR), \
-		Configuration.cpp ServerConfig.cpp Location.cpp \
+		Configuration.cpp Server.cpp Location.cpp \
 		Exception.cpp WebService.cpp \
 		main.cpp)
 
@@ -24,7 +24,6 @@ all : $(NAME)
 
 $(NAME) : $(OBJS)
 	$(CC) $(CFLAGS) -I$(INCDIR) $(OBJS) -o $(NAME)
-	./webserv default.nginx
 
 clean :
 	rm -f $(OBJS)

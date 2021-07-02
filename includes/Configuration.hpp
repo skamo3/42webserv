@@ -2,14 +2,14 @@
 #define CONFIGURATION_HPP
 
 #include "base.hpp"
-#include "ServerConfig.hpp"
+#include "Server.hpp"
 
 class Configuration
 {
 	private:
 		std::map<std::string, std::string>	option;
-		std::vector<ServerConfig>			serverConfig;
-
+		std::vector<Server>			server;
+		void    saveOption(std::string line);
 	
 	public:
 		Configuration();
@@ -17,11 +17,10 @@ class Configuration
 		Configuration &operator=(const Configuration &other);
 		~Configuration();
 
-		void saveConfig(int fd);
+		void	saveConfig(std::ifstream &fin);
 
-		bool    checkSpaceLine(std::string line);
-
-		void    saveOption(std::string line);
+		std::vector<Server>		getServerVec();
+		std::string 			getOption(std::string const &key);
 
 
 
